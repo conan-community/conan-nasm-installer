@@ -1,32 +1,32 @@
-[![Download](https://api.bintray.com/packages/bincrafters/public-conan/nasm%3Abincrafters/images/download.svg) ](https://bintray.com/bincrafters/public-conan/nasm%3Abincrafters/_latestVersion)
-[![Build Status AppVeyor](https://ci.appveyor.com/api/projects/status/github/bincrafters/conan-nasm?branch=stable%2F2.13.01&svg=true)](https://ci.appveyor.com/project/bincrafters/conan-nasm)
+[![Download](https://api.bintray.com/packages/conan-community/conan/nasm%3Aconan/images/download.svg) ](https://bintray.com/conan-community/conan/nasm%3Aconan/_latestVersion)
+[![Build Status AppVeyor](https://ci.appveyor.com/api/projects/status/github/conan-community/conan-nasm?svg=true)](https://ci.appveyor.com/project/ConanCIintegration/conan-nasm)
 
 ## Conan package recipe for *nasm*
 
 Nasm for windows. Useful as a build_require.
 
-The packages generated with this **conanfile** can be found on [Bintray](https://bintray.com/bincrafters/public-conan/nasm%3Abincrafters).
+The packages generated with this **conanfile** can be found on [Bintray](https://bintray.com/conan-community/conan/nasm%3Aconan).
 
 
 ## Issues
 
 If you wish to report an issue or make a request for a package, please do so here:
 
-[Issues Tracker](https://github.com/bincrafters/community/issues)
+[Issues Tracker](https://github.com/conan-community/community/issues)
 
 
 ## For Users
 
 ### Basic setup
 
-    $ conan install nasm/2.13.01@bincrafters/stable
+    $ conan install nasm/2.13.01@conan/stable
 
 ### Project setup
 
 If you handle multiple dependencies in your project is better to add a *conanfile.txt*
 
     [requires]
-    nasm/2.13.01@bincrafters/stable
+    nasm/2.13.01@conan/stable
 
     [generators]
     txt
@@ -42,14 +42,16 @@ Note: It is recommended that you run conan install from a build directory and no
 
 The following command both runs all the steps of the conan file, and publishes the package to the local system cache.  This includes downloading dependencies from "build_requires" and "requires" , and then running the build() method.
 
-    $ conan create . bincrafters/stable
+    $ conan create . conan/stable
 
 
 
 
 ## Add Remote
 
-    $ conan remote add bincrafters "https://api.bintray.com/conan/bincrafters/public-conan"
+Conan Community has its own Bintray repository, however, we are working to distribute all package in the Conan Center:
+
+    $ conan remote add conan-center "https://conan.bintray.com"
 
 
 ## Conan Recipe License
@@ -57,4 +59,4 @@ The following command both runs all the steps of the conan file, and publishes t
 NOTE: The conan recipe license applies only to the files of this recipe, which can be used to build and package nasm.
 It does *not* in any way apply or is related to the actual software being packaged.
 
-[MIT](git@github.com:conan-community/conan-nasm-installer/blob/stable/2.13.01/LICENSE.md)
+[MIT](LICENSE)
